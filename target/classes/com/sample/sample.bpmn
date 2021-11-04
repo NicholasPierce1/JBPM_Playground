@@ -275,7 +275,8 @@ System.out.println(&quot;sum is with a list: &quot; + arrayList.get(0));</bpmn2:
     <bpmn2:scriptTask id="ScriptTask_8" name="Parallel Resolution" scriptFormat="http://www.java.com/java">
       <bpmn2:incoming>SequenceFlow_19</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_18</bpmn2:outgoing>
-      <bpmn2:script>final ParallelModel model = (ParallelModel)kcontext.getVariable(&quot;parallelTestHelper&quot;);&#xD;
+      <bpmn2:script>System.out.println(&quot;merging&quot;);&#xD;
+final ParallelModel model = (ParallelModel)kcontext.getVariable(&quot;parallelTestHelper&quot;);&#xD;
 model.awaitThreads();&#xD;
 &#xD;
 System.out.println(&quot;concurrent test completed and merged&quot;);</bpmn2:script>
